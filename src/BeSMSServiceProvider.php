@@ -14,6 +14,10 @@ class BeSMSServiceProvider extends ServiceProvider implements DeferrableProvider
      */
     final public function register(): void
     {
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/besms.php', 'besms'
+        );
+
         $this->app->singleton(BeSMS::class, function ($app) {
             if (
                 empty($app['config']['besms.username']) ||
