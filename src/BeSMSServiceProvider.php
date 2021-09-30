@@ -37,6 +37,6 @@ class BeSMSServiceProvider extends ServiceProvider implements DeferrableProvider
 
     final public function provides(): array
     {
-        return [BeSMS::class];
+        return ['beSMS'];
     }
 }
