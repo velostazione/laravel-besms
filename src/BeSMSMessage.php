@@ -8,9 +8,10 @@ final class BeSMSMessage
 
     public string|null $sender;
 
-    public function __construct(string $content = '')
+    public function __construct(string $content = '', string $sender = null)
     {
         $this->content = $content;
+        $this->sender = $sender;
     }
 
     public function content(string $content): self
